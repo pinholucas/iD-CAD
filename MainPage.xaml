@@ -1,0 +1,29 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:win2d_sandbox"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
+    xmlns:Controls="using:win2d_sandbox.Controls"
+    x:Class="win2d_sandbox.MainPage"    
+    mc:Ignorable="d" 
+    RequestedTheme="Dark">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Controls:mainCanvas Margin="0,100,0,0"/>
+        <TextBlock x:Name="tBox_Debug" x:FieldModifier="public" HorizontalAlignment="Left" Margin="15,110,0,0" TextWrapping="Wrap" Text="DEBUG INFOS" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tBox_XYZ" x:FieldModifier="public"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="X: 0.0000 | Y: 0.0000 | Z: 0.0000 " VerticalAlignment="Bottom" ManipulationMode="All" Margin="15,0,0,10"/>
+
+        <Button x:Name="btnLine" Content="LINHA" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="btnLine_Click" Width="105"/>
+        <Button x:Name="btnRect" Content="RETÂNGULO" HorizontalAlignment="Left" Margin="130,10,0,0" VerticalAlignment="Top" Width="105" Click="btnRect_Click"/>
+        <Button x:Name="btnCircle" Content="CIRCULO" HorizontalAlignment="Left" Margin="250,10,0,0" VerticalAlignment="Top" Width="105" Click="btnCircle_Click"/>
+        <Button x:Name="btnArcPtP" Content="ARCO PtP" HorizontalAlignment="Left" Margin="370,10,0,0" VerticalAlignment="Top" Width="105" ToolTipService.ToolTip="Arco point-to-point" Click="btnArcPtP_Click"/>
+        <Button x:Name="btnColuna" Content="COLUNA" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" Width="105" Click="btnColuna_Click" ToolTipService.ToolTip="Estrutural"/>
+        <Button x:Name="btnSnap" Content="SNAP" HorizontalAlignment="Right" Margin="0,57,10,0" VerticalAlignment="Top" Width="80" Click="btnSnap_Click"/>
+        <Button x:Name="btnOrtho" Content="ORTHO" HorizontalAlignment="Right" Margin="0,57,105,0" VerticalAlignment="Top" Width="80" Click="btnOrtho_Click"/>
+        <Button x:Name="btnCursor" Content="CURSOR" HorizontalAlignment="Right" Margin="0,57,200,0" VerticalAlignment="Top" Width="80" ToolTipService.ToolTip="Ativar o cursor do Windows" Click="btnCursor_Click"/>
+        <Button x:Name="btnPOSType" Content="CARTESIANO" HorizontalAlignment="Right" Margin="0,57,295,0" VerticalAlignment="Top" Click="btnPOSType_Click" Width="107" ToolTipService.ToolTip="Modo das coordenadas XYZ"/>
+        <Button x:Name="btnRuler" Content="RÉGUA" HorizontalAlignment="Left" Margin="370,57,0,0" VerticalAlignment="Top" Width="105" ToolTipService.ToolTip="Mede a distancia entre dois pontos" Click="btnRuler_Click"/>
+
+    </Grid>
+</Page>
